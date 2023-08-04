@@ -11,9 +11,10 @@ function App() {
     <Router>
       <Header />
       <main className="main"></main>
-      <Footer/>
 
       <Routes />
+      <Footer/>
+
     </Router>
   );
 }
