@@ -4,33 +4,37 @@ import CharactersGallery from "../../components/utils/CharactersGallery";
 import SearchElement from "../../components/utils/SearchElement";
 
 export default function CharactersPage() {
-  const [characters, setCharacters] = useState();
-  const [filter, setFilter] = useState("");
+  const [characters, setCharacters] = useState([]);
+  const [charactersCopy, setCharactersCopy] = useState([]);
 
-  async function getCharacters(localFilter) {
+  async function getCharacters() {
     try {
-      const { data } = await axios(
-        "http://localhost:3000/characters?&name="+ localFilter);
-      console.log("http://localhost:3000/characters&name="+localFilter)
+      const { data } = await axios("http://localhost:3000/characters");
       setCharacters(data);
+      return data;
     } catch (error) {
       console.log(error);
     }
   }
-  useEffect(() => {
-    getCharacters(filter);
-  }, []);
 
-  const updateFilter = (algo) => {
-    const fliterAux = algo;
-    setFilter(fliterAux)
-    getCharacters(filter);
+  useEffect(() => {
+    getCharacters();
+  }, []);
+  useEffect(() => {
+    setCharactersCopy([...characters]);
+  }, [characters]);
+
+  const updateFilter = (name) => {
+    const charactersAux = characters.filter((character) =>
+      character.name.toLowerCase().includes(name.toLowerCase())
+    );
+    setCharactersCopy(charactersAux);
   };
 
   return (
     <div className="characters">
       <SearchElement updateFilter={updateFilter} />
-      {characters && <CharactersGallery data={characters} />}
+      {charactersCopy && <CharactersGallery data={charactersCopy} />}
     </div>
   );
 }
