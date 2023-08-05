@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import { useState , useEffect} from 'react';
 import axios from 'axios';
@@ -21,6 +22,9 @@ export default function HousesDetailsPage() {
     }, []);
     return (
       <div className="house">
+      <Link to={"/houses"}>
+        <p>VOLVER</p>
+      </Link>
        {house && <HousesDetailsGallery data={house} />}
       </div>
     );

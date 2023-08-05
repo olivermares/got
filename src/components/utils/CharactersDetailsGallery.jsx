@@ -1,0 +1,47 @@
+import React from "react";
+
+export default function CharactersDetailsGallery({ data }) {
+  console.log(data);
+  return (
+    <div className="details">
+      <img src={"http://localhost:3000" + data.image} alt={data.name} />
+      <h2>{data.name}</h2>
+      <div className="details-cards">
+        <div className="details-card-detail">
+          <h3>CASA</h3>
+          <image>FALTA</image>
+        </div>
+        <div className="details-card-detail">
+          <h3>ALIANZAS</h3>
+          {data.alliances.map((item) => (
+            <p key={item}>{item}</p>
+          ))}
+        </div>
+        <div className="details-card-detail">
+          <h3>APARICIONES</h3>
+          {data.episodes.map((item) => (
+            <p key={item}>{item}</p>
+          ))}
+        </div>
+        <div className="details-card-detail">
+          <h3>PADRES</h3>
+          {data.parents.map((item) => (
+            <p key={item}>{item}</p>
+          ))}
+        </div>
+        <div className="details-card-detail">
+          <h3>DESCENDIENTES</h3>
+          {data.siblings.map((item) => (
+            <p key={item}>{item}</p>
+          ))}
+        </div>
+        <div className="details-card-detail">
+          <h3>TITULOS</h3>
+          {data.titles.map((item) => (
+            <p key={item}>{item}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
