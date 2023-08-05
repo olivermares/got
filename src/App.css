@@ -1,10 +1,15 @@
 *{
   /* // background-color: red;
   // background-image: url("https://img.europapress.es/fotoweb/fotonoticia_20190520045042_1200.jpg"); */
-  background-image: url ("./background-homepage.jpg")
+  background-image: url ("./background-homepage.jpg");
+  
 }
 
 
+/* h2{
+  font-family: "Got";
+
+} */
 .App {
   text-align: center;
 }

@@ -10,10 +10,13 @@ function App() {
   return (
     <Router>
       <Header />
+      <div className="container">
       <main className="main"></main>
 
       <Routes />
       <Footer/>
+      </div>
+      
 
     </Router>
   );

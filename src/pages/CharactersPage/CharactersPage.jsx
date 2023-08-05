@@ -11,7 +11,6 @@ export default function CharactersPage() {
     try {
       const { data } = await axios("http://localhost:3000/characters");
       setCharacters(data);
-      return data;
     } catch (error) {
       console.log(error);
     }
