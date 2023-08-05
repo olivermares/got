@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="footer">
-    <h2>Footer</h2>
     <div className="footer-link">
         <NavLink
           to="/houses"
