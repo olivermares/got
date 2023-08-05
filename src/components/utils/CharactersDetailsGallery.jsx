@@ -1,7 +1,8 @@
 import React from "react";
 
-export default function CharactersDetailsGallery({ data }) {
-  console.log(data);
+export default function CharactersDetailsGallery({ data , img}) {
+console.log("http://localhost:3000" + img)
+console.log("http://localhost:3000" + data.image)
   return (
     <div className="details">
       <img src={"http://localhost:3000" + data.image} alt={data.name} />
@@ -9,7 +10,7 @@ export default function CharactersDetailsGallery({ data }) {
       <div className="details-cards">
         <div className="details-card-detail">
           <h3>CASA</h3>
-          <image>FALTA</image>
+          <img src={"http://localhost:3000" + img} alt={"escudo"}/> 
         </div>
         <div className="details-card-detail">
           <h3>ALIANZAS</h3>
