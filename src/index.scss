@@ -1,21 +1,27 @@
 //SETTINGS
+@import "./styles/settings/fonts.settings";
 @import "./styles/settings/colors.settings";
-@import "./styles/settings/font-families.settings";
+
 
 //EXTERNALS (IMPORTS) 
 @import "./styles/imports/blocks.imports";
 
 //ELEMENTS
+@import "./styles/elements/h1.elements";
 @import "./styles/elements/h2.elements";
+@import "./styles/elements/h3.elements";
+@import "./styles/elements/h4.elements";
+@import "./styles/elements/p.elements";
 @import "./styles/elements/img.elements";
 
 //BLOCKS
-@import "./styles/blocks/homepage"; //comprobar
+//@import "./styles/blocks/homepage"; //comprobar
 @import "./styles/blocks/text.blocks";
+@import "./styles/blocks/body.blocks";
 
 //UTILS
 @import "./styles/utils/active.utils";
-@import "./styles/utils/bng-home.utils"; //comprobar
+//@import "./styles/utils/bng-home.utils"; //comprobar
 
 
 
