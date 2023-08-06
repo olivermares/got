@@ -11,7 +11,6 @@ export default function CharactersGallery({data}) {
             <div className='hide alignCenter'>
               <h4 className='e-h4 shadow'>{item.name}</h4>
             </div>
-            
             </Link>
           </div>
          

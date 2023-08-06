@@ -33,7 +33,7 @@ export default function CharactersPage() {
   };
 
   return (
-    <div className="characters">
+    <div>
     <Header home={true}/>
       <SearchElement updateFilter={updateFilter} />
       {charactersCopy && <CharactersGallery data={charactersCopy} />}
