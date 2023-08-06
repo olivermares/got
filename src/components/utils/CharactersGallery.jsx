@@ -7,8 +7,8 @@ export default function CharactersGallery({data}) {
               {data.map((item) => (          
           <div key={item.id} className="col-12 col-lg-3">
           <Link to={`/characters/${item.id}`}>
-            <img src={"http://localhost:3000" + item.image} alt={item.name} />
-            <h2>{item.name}</h2>
+            <img className='img' src={"http://localhost:3000" + item.image} alt={item.name} />
+            <h4 className='e-h4'>{item.name}</h4>
             </Link>
           </div>
          
