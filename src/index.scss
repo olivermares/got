@@ -5,6 +5,7 @@
 
 //EXTERNALS (IMPORTS) 
 @import "./styles/imports/blocks.imports";
+@import "./styles/imports/fonts.imports"; 
 
 //ELEMENTS
 @import "./styles/elements/h1.elements";
@@ -15,13 +16,22 @@
 @import "./styles/elements/img.elements";
 
 //BLOCKS
-//@import "./styles/blocks/homepage"; //comprobar
-@import "./styles/blocks/text.blocks";
+@import "./styles/blocks/header.blocks";
 @import "./styles/blocks/body.blocks";
+@import "./styles/blocks/footer.blocks";
+@import "./styles/blocks/text.blocks";
+@import "./styles/blocks/main.blocks";
+@import "./styles/blocks/details.blocks";
+@import "./styles/blocks/search.blocks";
+@import "./styles/blocks/hide.blocks";
 
 //UTILS
 @import "./styles/utils/active.utils";
-//@import "./styles/utils/bng-home.utils"; //comprobar
+@import "./styles/utils/shadow.utils";
+@import "./styles/utils/backgroundImg.utils";
+@import "./styles/utils/margins.utils"; 
+@import "./styles/utils/alignCenter.utils"; 
+
 
 
 

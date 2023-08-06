@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import CharactersGallery from "../../components/utils/CharactersGallery";
 import SearchElement from "../../components/utils/SearchElement";
+import Header from "../../components/basic/Header";
+import Footer from "../../components/basic/Footer";
 
 export default function CharactersPage() {
   const [characters, setCharacters] = useState([]);
@@ -32,8 +34,10 @@ export default function CharactersPage() {
 
   return (
     <div className="characters">
+    <Header home={true}/>
       <SearchElement updateFilter={updateFilter} />
       {charactersCopy && <CharactersGallery data={charactersCopy} />}
+      <Footer/>
     </div>
   );
 }
