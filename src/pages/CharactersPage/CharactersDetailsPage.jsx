@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import CharactersDetailsGallery from "../../components/utils/CharactersDetailsGallery";
+import Header from "../../components/basic/Header";
 
 export default function CharactersDetailsPage() {
   const { id } = useParams();
@@ -37,8 +38,10 @@ export default function CharactersDetailsPage() {
   }, [character]);
   return (
     <div>
+      <Header home={true}/>
       <Link to={"/characters"}>
-        <p>VOLVER</p>
+        <img src="arrowleft.png" alt="return"/>
+        <p className="p"> Volver</p>
       </Link>
       {character && house && <CharactersDetailsGallery data={character} img={house.image} />}
     </div>

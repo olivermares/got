@@ -6,8 +6,8 @@ export default function SearchElement({updateFilter}) {
         updateFilter(value)
     }
   return (
-    <div>
-      <input type="text" onChange={doFilter}></input>
+    <div className='search'>
+      <input type="text" onChange={doFilter} placeholder="Buscar..." className='search-input'></input>
     </div>
   )
 }
