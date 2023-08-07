@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import HousesGallery from "../../components/utils/HousesGallery";
 import SearchElement from "../../components/utils/SearchElement";
+import Header from "../../components/basic/Header";
+import Footer from "../../components/basic/Footer";
 
 export default function HousesPage() {
   const [houses, setHouses] = useState([]);
@@ -32,9 +34,17 @@ export default function HousesPage() {
   };
 
   return (
-    <div className="houses">
-      <SearchElement updateFilter={updateFilter} />
-      {housesCopy && <HousesGallery data={housesCopy} />}
-    </div>
+    <>
+      <header className="header">
+        <SearchElement updateFilter={updateFilter} />
+        <Header home={true} />
+      </header>
+      <main className="main">
+        {housesCopy && <HousesGallery data={housesCopy} />}
+      </main>
+      <footer className="footer margin-top margin-bottom">
+        <Footer />
+      </footer>
+    </>
   );
 }

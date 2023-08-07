@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import CharactersGallery from "../../components/utils/CharactersGallery";
 import SearchElement from "../../components/utils/SearchElement";
+import Header from "../../components/basic/Header";
+import Footer from "../../components/basic/Footer";
 
 export default function CharactersPage() {
   const [characters, setCharacters] = useState([]);
@@ -11,7 +13,6 @@ export default function CharactersPage() {
     try {
       const { data } = await axios("http://localhost:3000/characters");
       setCharacters(data);
-      return data;
     } catch (error) {
       console.log(error);
     }
@@ -25,6 +26,7 @@ export default function CharactersPage() {
   }, [characters]);
 
   const updateFilter = (name) => {
+    console.log(name);
     const charactersAux = characters.filter((character) =>
       character.name.toLowerCase().includes(name.toLowerCase())
     );
@@ -32,9 +34,22 @@ export default function CharactersPage() {
   };
 
   return (
-    <div className="characters">
-      <SearchElement updateFilter={updateFilter} />
-      {charactersCopy && <CharactersGallery data={charactersCopy} />}
-    </div>
+    <>
+      <header className="header">
+        <SearchElement updateFilter={updateFilter} />
+        <Header home={true} />
+      </header>
+      <main className="main">
+        {charactersCopy && (
+          <CharactersGallery
+            updateFilter={updateFilter}
+            data={charactersCopy}
+          />
+        )}
+      </main>
+      <footer className="footer margin-top margin-bottom">
+        <Footer />
+      </footer>
+    </>
   );
 }

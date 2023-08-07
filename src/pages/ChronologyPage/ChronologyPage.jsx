@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ChronologyGallery from "../../components/utils/ChronologyGallery";
+import Header from "../../components/basic/Header";
+import Footer from "../../components/basic/Footer";
 
 export default function ChronologyPage() {
   const [characters, setCharacters] = useState([]);
@@ -32,9 +34,22 @@ export default function ChronologyPage() {
   };
 
   return (
-    <div className="characters">
-      <button onClick={putOrder}>O</button>
-      {characters && <ChronologyGallery data={characters} />}
-    </div>
+    <>
+      <header className="header">
+        <div></div>
+        <Header home={true} />
+      </header>
+      <main className="main">
+        <div className="alignCenter ">
+          <button className="btnOrder" onClick={putOrder}>
+            <p className="e-p padding10">O</p>
+          </button>      
+        </div>
+        {characters && <ChronologyGallery data={characters} />}
+      </main>
+      <footer className="footer margin-top margin-bottom">
+        <Footer />
+      </footer>
+    </>
   );
 }
