@@ -4,9 +4,11 @@ import Footer from "../../components/basic/Footer";
 export default function HomePage() {
   return (
     <div className="backgroundImg">
-    <Header home={false}/>
-    <main className="main">
-      <h1 className="e-h1">GAMES OF THRONES</h1>
+    <Header home={true}/>
+    <main className="main main-home">
+        <h1 className="e-h1 alignCenter">GAMES OF THRONES</h1>
+     
+      
     </main>  
     <Footer/>
     </div>

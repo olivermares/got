@@ -7,7 +7,7 @@ export default function Header({home}) {
     <header className="header">
     <div className="header-div">
       {home &&<NavLink to="/">
-          <img className= "header-div-image" src="home.png" alt="home"/>
+          <img className= "img-icon" src="/home.png" alt="ho"/>
       </NavLink>}
     </div>
       

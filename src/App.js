@@ -6,9 +6,9 @@ import { NavLink } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="container">
+      
       <Routes />
-      </div>     
+           
     </Router>
   );
 }

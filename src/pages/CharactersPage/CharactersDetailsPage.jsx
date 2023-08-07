@@ -39,11 +39,16 @@ export default function CharactersDetailsPage() {
   return (
     <div>
       <Header home={true}/>
+      <main className="container">
       <Link to={"/characters"}>
-        <img src="arrowleft.png" alt="return"/>
-        <p className="p"> Volver</p>
+      <div className="return">
+        <img className= "img-icon" src="/arrowleft.png" alt="return"/>
+        <p className='e-p'>VOLVER</p>
+      </div>
       </Link>
       {character && house && <CharactersDetailsGallery data={character} img={house.image} />}
+      </main>
     </div>
+    
   );
 }
