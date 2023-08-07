@@ -25,15 +25,16 @@ export default function HousesDetailsPage() {
   return (
     <>
       <header className="header">
-        <Header home={true} />
-      </header>
-      <main className="container">
-        <Link to={"/houses"}>
+      <Link to={"/houses"}>
           <div className="return">
             <img className="img-icon" src="/arrowleft.png" alt="return" />
             <p className="e-p">VOLVER</p>
           </div>
         </Link>
+        <Header home={true} />
+      </header>
+      <main className="container">
+        
         {house && <HousesDetailsGallery data={house} />}
       </main>
     </>
