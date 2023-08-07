@@ -23,7 +23,9 @@ export default function CharactersDetailsPage() {
 
   async function getHouse(houseName) {
     try {
-      const {data} = await axios(`http://localhost:3000/houses?name=${houseName}`);
+      const { data } = await axios(
+        `http://localhost:3000/houses?name=${houseName}`
+      );
       setHouse(data[0]);
     } catch (error) {
       console.log(error);
@@ -33,22 +35,28 @@ export default function CharactersDetailsPage() {
   useEffect(() => {
     getCharacter();
   }, []);
-  useEffect(()=>{
-    if(character)getHouse(character.house)
+
+  useEffect(() => {
+    if (character) getHouse(character.house);
   }, [character]);
+  
   return (
-    <div>
-      <Header home={true}/>
-      <main className="container">
+    <>
+      <header className="header">
       <Link to={"/characters"}>
-      <div className="return">
-        <img className= "img-icon" src="/arrowleft.png" alt="return"/>
-        <p className='e-p'>VOLVER</p>
-      </div>
-      </Link>
-      {character && house && <CharactersDetailsGallery data={character} img={house.image} />}
+          <div className="return">
+            <img className="img-icon" src="/arrowleft.png" alt="return" />
+            <p className="e-p">VOLVER</p>
+          </div>
+        </Link>
+        <Header home={true} />
+      </header>
+      <main className="container">
+
+        {character && house && (
+          <CharactersDetailsGallery data={character} img={house.image} />
+        )}
       </main>
-    </div>
-    
+    </>
   );
 }

@@ -26,6 +26,7 @@ export default function CharactersPage() {
   }, [characters]);
 
   const updateFilter = (name) => {
+    console.log(name);
     const charactersAux = characters.filter((character) =>
       character.name.toLowerCase().includes(name.toLowerCase())
     );
@@ -33,13 +34,22 @@ export default function CharactersPage() {
   };
 
   return (
-    <div>
-    <Header home={true}/>
-    <main className="main">
-      <SearchElement updateFilter={updateFilter} />
-      {charactersCopy && <CharactersGallery data={charactersCopy} />}
+    <>
+      <header className="header">
+        <SearchElement updateFilter={updateFilter} />
+        <Header home={true} />
+      </header>
+      <main className="main">
+        {charactersCopy && (
+          <CharactersGallery
+            updateFilter={updateFilter}
+            data={charactersCopy}
+          />
+        )}
       </main>
-      <Footer/>
-    </div>
+      <footer className="footer margin-top margin-bottom">
+        <Footer />
+      </footer>
+    </>
   );
 }
