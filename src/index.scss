@@ -6,6 +6,7 @@
 //EXTERNALS (IMPORTS) 
 @import "./styles/imports/blocks.imports";
 @import "./styles/imports/fonts.imports"; 
+@import "./styles/imports/simplebar.imports";
 
 //ELEMENTS
 @import "./styles/elements/h1.elements";
@@ -26,7 +27,9 @@
 @import "./styles/blocks/hide.blocks";
 @import "./styles/blocks/order.blocks";
 @import "./styles/blocks/btnOrder.blocks";
-@import "./styles/blocks/container2.blocks"; 
+@import "./styles/blocks/containers.blocks"; 
+@import "./styles/blocks/bar.blocks"; 
+@import "./styles/blocks/return.blocks"; 
 
 //UTILS
 @import "./styles/utils/active.utils";

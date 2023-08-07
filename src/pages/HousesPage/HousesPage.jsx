@@ -34,11 +34,13 @@ export default function HousesPage() {
   };
 
   return (
-    <div className="houses">
+    <div>
     <Header home={true}/>
+    <main className="main">
       <SearchElement updateFilter={updateFilter} />
       {housesCopy && <HousesGallery data={housesCopy} />}
       <Footer/>
+      </main>
     </div>
     
   );

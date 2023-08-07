@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SimpleBar from "simplebar-react";
 
 export default function HousesGallery({ data }) {
   return (
-      <div className="row">
+    <div className='container'>
+    <SimpleBar forceVisible="y" autoHide="false" style={{ maxHeight: 500 }}>
+      <div className="row container">
         {data.map((item) => (          
           <div key={item.id} className="col-6 col-lg-2">
           <Link to={`/houses/${item.id}`}>
@@ -13,6 +16,8 @@ export default function HousesGallery({ data }) {
           </div>
          
         ))}       
+      </div>
+      </SimpleBar>
       </div>
   );
 }

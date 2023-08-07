@@ -35,8 +35,10 @@ export default function CharactersPage() {
   return (
     <div>
     <Header home={true}/>
+    <main className="main">
       <SearchElement updateFilter={updateFilter} />
       {charactersCopy && <CharactersGallery data={charactersCopy} />}
+      </main>
       <Footer/>
     </div>
   );
