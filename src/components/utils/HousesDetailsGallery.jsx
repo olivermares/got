@@ -4,7 +4,7 @@ export default function HousesDetailsGallery({ data }) {
   return (
     <div className="details">
       <div className="details-card margin-bottom">
-        <img className="img margin-bottom" src={"http://localhost:3000" + data.image} alt={data.name} />
+        <img className="img-ho margin-bottom" src={"http://localhost:3000" + data.image} alt={data.name} />
         <h2 className="e-h2">{data.name}</h2>
       </div>
       <div className="details-info margin-top">
@@ -23,7 +23,7 @@ export default function HousesDetailsGallery({ data }) {
           ))}
         </div>
         <div className="details-info-detail">
-          <h3 className="e-h3 margin-bottom">RELIGIONES (SECTAS)</h3>
+          <h3 className="e-h3 margin-bottom">RELIGIONES</h3>
           {data.religions.map((item) => (
             <p className="e-p margin-top" key={item}>{item}</p>
           ))}

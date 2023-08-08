@@ -7,7 +7,7 @@ export default function CharactersDetailsGallery({ data, img }) {
     <div className="details">
       <div className="details-card margin-bottom">
         <img
-          className="img margin-bottom"
+          className="img-ho margin-bottom"
           src={"http://localhost:3000" + data.image}
           alt={data.name}
         />
@@ -16,7 +16,7 @@ export default function CharactersDetailsGallery({ data, img }) {
       <div className="details-info margin-top">
         <div className="details-info-detail">
           <h3 className="e-h3 margin-bottom" >CASA</h3>
-          <img src={"http://localhost:3000" + img} alt={"house"} />
+          <img className="img-ho" src={"http://localhost:3000" + img} alt={"house"} />
         </div>
         <div className="details-info-detail margin-top">
           <h3 className="e-h3">ALIANZAS</h3>
