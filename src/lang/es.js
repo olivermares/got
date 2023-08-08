@@ -4,4 +4,5 @@ export const es = {
   "character": "personajes",
   "houses": "casas",
   "chronology": "cronologia",
+  "home": "Juego de Tronos"
 };
